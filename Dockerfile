@@ -8,9 +8,7 @@ RUN apk update && \
 
 WORKDIR /var/www
 
-COPY ./Gemfile ./
-
-COPY ./Gemfile.lock ./
+COPY ./ ./
 
 RUN gem install bundler && \
     bundle install -j4
