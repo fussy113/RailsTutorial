@@ -11,7 +11,7 @@ WORKDIR /var/www
 COPY ./ ./
 
 RUN gem install bundler && \
-    bundle install -j4
+    bundle install --without production -j4
 
 EXPOSE 3000
 
